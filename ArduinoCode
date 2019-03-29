@@ -36,15 +36,15 @@ void loop() {
   
   // make 6 steps
   if ((even == true)&(hourFlag == true)) {
-    stepper.step(6);
-    hourFlag == false;
+    myStepper.step(6);
+    hourFlag = false;
     even = false;
   }
   // make 7 steps
   else if ((even == false)&(hourFlag == true)) 
   {
-    stepper.step(7);
-    hourFlag == false;
+    myStepper.step(7);
+    hourFlag = false;
     even = true;
   }
   
@@ -57,5 +57,5 @@ void loop() {
     myStepper.setSpeed(motorSpeed);
     // step 1/100 of a revolution:
     myStepper.step(stepsPerRevolution / 100);
-*/  }
-}
+*/  
+  }
